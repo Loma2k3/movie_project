@@ -1,0 +1,43 @@
+<div class="bg-main select-none">
+<div class=" text-header-text flex items-center h-[80px] basic-width mx-auto">
+    <h1 class="text-[35px] font-bold cursor-pointer mb-0">CINEMA PROJECT</h1>
+    <ul class="flex items-center flex-1 justify-between text-[17px] pl-[60px] mb-0">
+        <li class="hover:text-header-text-hover cursor-pointer"
+        [class.text-header-text-hover]="active == 'home'" 
+        (click)="changeActive('home')"
+        routerLink="/home">Trang chủ</li>
+
+        <li class="hover:text-header-text-hover cursor-pointer"
+        [class.text-header-text-hover]="active == 'showtimes'"
+        (click)="changeActive('showtimes')"
+        routerLink="/showtimes">Lịch chiếu</li>
+
+        <li class="hover:text-header-text-hover cursor-pointer"
+        [class.text-header-text-hover]="active == 'news'"
+        (click)="changeActive('news')"
+        routerLink="/news">Tin tức</li>
+
+        <li class="hover:text-header-text-hover cursor-pointer"
+        [class.text-header-text-hover]="active == 'ticket'"
+        (click)="changeActive('ticket')"
+        routerLink="/ticket">Giá vé</li>
+
+        <li class="hover:text-header-text-hover cursor-pointer"
+        [class.text-header-text-hover]="active == 'about'"
+        (click)="changeActive('about')"
+        routerLink="/about">Giới thiệu</li>
+
+        <li>
+            <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
+            cursor-pointer hover:scale-105 transition">
+                Đăng ký
+            </button>
+            <button class="bg-login rounded-full h-[41px] w-[143px] ml-[20px]
+            cursor-pointer hover:scale-105 transition">
+                Đăng nhập
+            </button>
+        </li>
+    </ul>
+</div>
+</div>
+

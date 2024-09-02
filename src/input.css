@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components{
+    .basic-width{
+        @apply max-w-[1283px]
+    }
+}
