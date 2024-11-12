@@ -1,14 +1,14 @@
 
 
 <div class="select-none cursor-pointer"
-routerLink="/detail">
+routerLink="/detail" (click)="chooseMovie()">
   <div class="rounded-xl overflow-hidden">
-    <img src="assets/img/yourname.jpg" alt="" class="w-[100%] h-[100%]
+    <img [src]="imageUrl" alt="" class="w-[100%] h-[100%]
     hover:scale-110 transition duration-500">
   </div>
   <div>
-    <p class="m-0 text-[15px] text-sub-title">anime, hành động</p>
-    <p class="m-0 text-[15px] text-sub-title">20/10/2003</p>
-    <h1 class="m-0 text-[23px] pt-[8px] font-bold text-title">Your name</h1>
+    <p class="m-0 text-[15px] text-sub-title">{{ genre }}</p>
+    <p class="m-0 text-[15px] text-sub-title">{{ releaseDate }}</p>
+    <h1 class="m-0 text-[23px] pt-[8px] font-bold text-title">{{ title }}</h1>
   </div>
 </div>

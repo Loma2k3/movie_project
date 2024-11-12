@@ -1,1 +1,44 @@
-<p>sign-up works!</p>
+
+
+    <div id="wrapper">
+        <!-- Form đăng ký -->
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" id="registerForm">
+            <h3>Đăng Ký</h3>
+            
+            <div class="form-group">
+                <input formControlName="ho_ten" type="text" required id="siu">
+                <label for="ho_ten" id="siu">Họ tên</label>
+            </div>
+            
+            <div class="form-group">
+                <input formControlName="email" type="email" required id="siu">
+                <label for="email" id="siu">Email</label>
+            </div>
+            
+            <div class="form-group">
+                <input formControlName="so_dien_thoai" type="text" required id="siu">
+                <label for="so_dien_thoai" id="siu">Số điện thoại</label>
+            </div>
+            
+            <div class="form-group">
+                <input formControlName="mat_khau" type="password" required id="siu">
+                <label for="mat_khau" id="siu">Mật khẩu</label>
+            </div>
+            
+            <input type="submit" value="Đăng ký" id="si">
+            
+            <div *ngIf="successMessage" class="success-message">
+                {{ successMessage }}
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Ngăn trình duyệt tự động tải lại trang
+
+            // Hiển thị thông báo thành công
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+        });
+    </script>

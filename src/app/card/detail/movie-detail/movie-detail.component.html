@@ -4,29 +4,35 @@
     <div class="flex  text-title 
      w-[930px] mx-auto">
         <div class="basis-1/3 overflow-hidden rounded-xl">
-            <img src="assets/img/yourname.jpg" alt="" class="w-[100%] h-[100%]
+            <img [src]="selected.phim.image" alt="" class="w-[100%] h-[100%]
             hover:scale-110 transition duration-500">
         </div>
     
         <div class="basis-2/3 p-[20px]flex flex-col p-[20px]">
-            <h1 class="m-0 text-[23px] pt-[8px] font-bold flex items-center gap-2">Your name
+            <h1 class="m-0 text-[23px] pt-[8px] font-bold flex items-center gap-2">{{selected.phim.ten_phim}}
                 <span class="border rounded-lg overflow-hidden
                     right-[20px] top-[20px] p-[5px] text-[13px] font-bold">3D</span>
             </h1>
-            <p class=" pt-[20px] m-0 text-[15px] text-sub-title flex gap-4"><span>anime, hành động</span> <span>113
+            <p class=" pt-[20px] m-0 text-[15px] text-sub-title flex gap-4"><span>{{selected.phim.the_loai}}</span> <span>{{selected.phim.thoi_luong}}
                     phút</span></p>
     
             <p>Xuất xứ: Japan</p>
-            <p>Khởi chiếu: 02/09/2024</p>
-            <p class="pt-[20px]">Your Name – Tên cậu là gì? là một bộ phim điện ảnh hoạt hình Nhật Bản thuộc thể loại tình
-                cảm lãng mạn, kỳ ảo, chính
-                kịch do Shinkai Makoto làm đạo diễn. Phim do hãng CoMix Wave Films sản xuất và Toho phát hành</p>
+            <p>Đạo diễn: {{selected.phim.dao_dien}}</p>
+            <p>Diễn viên: {{selected.phim.dien_vien}}</p>
+            <p>Khởi chiếu: {{selected.phim.ngay_phat_hanh}}</p>
+            <p class="pt-[20px]">{{selected.phim.mo_ta}}</p>
             <p class="pt-[20px] text-header-text-hover">T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)
             </p>
     
             <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                        cursor-pointer hover:scale-105 transition mt-[20px]">
-                Xem trailer
+                        cursor-pointer hover:scale-105 transition mt-[20px]"
+                        (click)="banve=true">
+                Đặt vé
+            </button>
+            <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
+                        cursor-pointer hover:scale-105 transition mt-[20px] ml-3"
+                        >
+                Trailer
             </button>
         </div>
     </div>
@@ -34,20 +40,10 @@
 </div>
 
 <div class="bg-footer-back flex justify-center text-title">
-    <section class="flex flex-col items-center hover:bg-login p-2 px-3">
-        <span>Th.09</span>
-        <span class="text-[23px] font-bold">02</span>
-        <span>thứ 2</span>
-    </section>
-    <section class="flex flex-col items-center hover:bg-login p-2 px-3">
-        <span>Th.09</span>
-        <span class="text-[23px] font-bold">02</span>
-        <span>thứ 2</span>
-    </section>
-    <section class="flex flex-col items-center hover:bg-login p-2 px-3">
-        <span>Th.09</span>
-        <span class="text-[23px] font-bold">02</span>
-        <span>thứ 2</span>
+    <section class="flex flex-col items-center bg-login p-2 px-3">
+        <span>th.{{releaseMonth}}</span>
+        <span class="text-[23px] font-bold">{{releaseDate}}</span>
+        <span>{{releaseYear}}</span>
     </section>
 </div>
 
@@ -56,30 +52,11 @@
         16
         tuổi chỉ chọn suất chiếu kết
         thúc trước 23h.</p>
-    <div class="grid grid-cols-5 gap-2  text-title mt-[10px]">
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                    cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                                cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                                cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                                cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                                cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-        <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                                                cursor-pointer transition mt-[20px] hover:bg-sub-title">
-            13:45
-        </button>
-    </div>
+</div>
+
+<div *ngIf="banve">
+    <app-banve
+        [thoi_gian]="selected.thoi_gian"
+        [ten_phong]="selected.phong_chieu.ten_phong"
+    />
 </div>

@@ -6,20 +6,20 @@
     <div class="text-title basic-width mx-auto">
         <section class="pt-[80px]">
             <div class="flex justify-between py-[15px]">
-                <h1 class="text-[23px]">
+                <h1 class="text-[23px]" >
                     <span class="bg-red inline-block p-2 rounded-full"></span> Phim đang chiếu
                 </h1>
-                <a href="" class="text-[17px] text-title">Xem tất cả</a>
             </div>
             <div class="grid grid-cols-4 gap-5">
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
+                <div *ngFor="let schedule of nowShowing" >
+                        <app-basic-card
+                            [title]="schedule.phim.ten_phim"
+                            [imageUrl]="schedule.phim.image"
+                            [genre]="schedule.phim.the_loai"
+                            [releaseDate]="schedule.phim.ngay_phat_hanh"
+                            [id]="schedule.id"
+                        />
+                </div>
             </div>
         </section>
 
@@ -30,14 +30,14 @@
                 </h1>
             </div>
             <div class="grid grid-cols-4 gap-5">
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
-                <section><app-basic-card></app-basic-card></section>
+                <section *ngFor="let schedule of upcoming">
+                    <app-basic-card
+                        [title]="schedule.phim.ten_phim"
+                        [imageUrl]="schedule.phim.image"
+                        [genre]="schedule.phim.the_loai"
+                        [releaseDate]="schedule.phim.ngay_phat_hanh"
+                    />
+                </section>
             </div>
         </section>
     </div>

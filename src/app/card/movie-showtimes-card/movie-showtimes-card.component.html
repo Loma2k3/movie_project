@@ -1,44 +1,24 @@
 <div class="flex bg-main text-title border rounded-xl overflow-hidden
 select-none cursor-pointer"
-routerLink="/detail">
+routerLink="/detail"
+(click)="chooseMovie()">
     <div class="basis-1/3 overflow-hidden">
-        <img src="assets/img/yourname.jpg" alt="" class="w-[100%] h-[100%]
+        <img [src]="image" alt="" class="w-[100%] h-[100%]
         hover:scale-110 transition duration-500">
     </div>
 
     <div class="basis-2/3 p-[20px] relative flex flex-col gap-1">
-        <p class="m-0 text-[15px] text-sub-title flex gap-4"><span>anime, hành động</span> <span>113 phút</span></p>
-        <h1 class="m-0 text-[23px] pt-[8px] font-bold">Your name</h1>
+        <p class="m-0 text-[15px] text-sub-title flex gap-4"><span>{{genre}}</span> <span>{{thoi_luong}} phút</span></p>
+        <h1 class="m-0 text-[23px] pt-[8px] font-bold">{{title}}</h1>
         <p>Xuất xứ: Japan</p>
-        <p>Khởi chiếu: 02/09/2024</p>
+        <p>Khởi chiếu: {{date}}</p>
         <p class="text-header-text-hover">T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)</p>
         <section>
             <span class="font-bold">lịch chiếu</span>
             <div class="flex flex-wrap gap-2 mt-2">
                 <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
-                <span class="border rounded-lg overflow-hidden p-[5px] hover:bg-sub-title
-                transition duration-500">15:10</span>
+                transition duration-500">{{time}}</span>
+                
             </div>
         </section>
         <span class="border rounded-lg overflow-hidden

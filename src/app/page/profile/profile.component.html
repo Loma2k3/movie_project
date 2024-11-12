@@ -1,0 +1,120 @@
+
+<div class=" bg-main text-title py-[50px]">
+    <h3 class="text-2xl font-bold mb-10 text-center">Thông tin cá nhân</h3>
+    
+    <!-- Tab Navigation -->
+    <div class="flex items-center justify-center gap-4 flex-wrap" role="tablist" aria-orientation="horizontal">
+      <button class="inline-flex items-center justify-center rounded-full text-sm font-medium bg-danger text-destructive-foreground hover:bg-blue-500 h-10 px-8 py-2" 
+              id="headlessui-tabs-tab-account" 
+              role="tab" 
+              aria-selected="true" 
+              type="button" 
+              aria-controls="headlessui-tabs-panel-account">
+        Tài khoản của tôi
+      </button>
+      <button class="inline-flex items-center justify-center rounded-full text-sm font-medium border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-8 py-2" 
+              id="headlessui-tabs-tab-purchase-history" 
+              role="tab" 
+              aria-selected="false" 
+              type="button" 
+              aria-controls="headlessui-tabs-panel-purchase-history">
+        Lịch sử mua vé
+      </button>
+    </div>
+    
+    <!-- Personal Information Form (Tab 1) -->
+    <div class="mt-10">
+      <div id="headlessui-tabs-panel-account" role="tabpanel" aria-labelledby="headlessui-tabs-tab-account" tabindex="0" data-headlessui-state="selected">
+        <div class="max-w-4xl mx-auto">
+          <form class="md:grid md:grid-cols-2 md:gap-6 space-y-6 md:space-y-0">
+            
+            <!-- First Name Field -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="first-name">
+                Họ <span class="text-red-500">*</span>
+              </label>
+              <input class=" text-sub-title flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     placeholder="Họ" 
+                     id="first-name" 
+                     value="Thái Chí" 
+                     name="FirstName">
+            </div>
+            
+            <!-- Last Name Field -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="last-name">
+                Tên <span class="text-red-500">*</span>
+              </label>
+              <input class="text-sub-title flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     placeholder="Tên" 
+                     id="last-name" 
+                     value="Bách" 
+                     name="LastName">
+            </div>
+            
+            <!-- Phone Number Field -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="phone">
+                Số điện thoại <span class="text-red-500">*</span>
+              </label>
+              <input class="text-sub-title flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     placeholder="Số điện thoại" 
+                     id="phone" 
+                     value="096573515" 
+                     name="Mobile">
+            </div>
+            
+            <!-- Address Field -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="address">
+                Địa chỉ
+              </label>
+              <input class="text-sub-title flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     placeholder="Địa chỉ" 
+                     id="address" 
+                     name="Address">
+            </div>
+            
+            <!-- Username Field (Disabled) -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="username">
+                Tên đăng nhập
+              </label>
+              <input class="flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     disabled 
+                     placeholder="Tên đăng nhập" 
+                     id="username" 
+                     value="bach2k3" 
+                     name="Username">
+            </div>
+            
+            <!-- Email Field (Disabled) -->
+            <div class="space-y-2 w-full">
+              <label class="text-sm font-medium leading-none" for="email">
+                Email
+              </label>
+              <input class="flex h-14 w-full rounded-[10px] border border-input bg-background px-3 py-2 text-base" 
+                     disabled 
+                     placeholder="Email" 
+                     id="email" 
+                     value="bachtheman25@gmail.com" 
+                     name="Email">
+            </div>
+            
+            <!-- Buttons -->
+            <div class="col-span-2 flex justify-end pt-4 gap-4">
+              <button class="inline-flex items-center justify-center text-sm font-medium border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3" 
+                      type="button">
+                Đổi mật khẩu
+              </button>
+              <button class="inline-flex items-center justify-center text-sm font-medium bg-danger text-destructive-foreground hover:bg-blue-500 h-9 rounded-md px-3" 
+                      type="submit">
+                Lưu thông tin
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

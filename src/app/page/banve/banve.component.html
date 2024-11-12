@@ -1,0 +1,977 @@
+<body>
+    <div id="headlessui-tabs-panel-:r3f:" role="tabpanel" aria-labelledby="headlessui-tabs-tab-:r3c:" tabindex="0" data-headlessui-state="selected">
+        <div class="mx-auto max-w-7xl"><div class="pb-10 pt-5 w-full xl:w-3/4 mx-auto px-4 xl:px-0">
+            <div class="flex items-center justify-between mb-5">
+                <div class="text-sm md:text-base self-end">Giờ chiếu: <span class="font-bold">{{thoi_gian}}</span>
+                </div>
+                <div class="rounded-xl border border-red-500 p-2 text-sm md:text-base hidden xl:block">Thời gian chọn ghế: <span class="font-semibold">08:57</span>
+                </div>
+                <p class="text-sm md:text-base block xl:hidden">08:57</p>
+            </div>
+            </div>
+            <div>
+                <div class="mb-4 text-center font-bold text-lg">{{ten_phong}}</div>
+                <div class="space-y-1 -mx-4">
+                    <div class="grid md:flex gap-1 items-center justify-center seat">
+                        <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">A</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A1'),
+                                'bg-orange-500': isSeatOccupied('A1'),
+                                'bg-gray-700': !isSeatSelected('A1') && !isSeatOccupied('A1')
+                              }"
+                        (click)="chonGhe('A1')">
+                            <p class="hidden lg:block text-sm lg:text-base">A1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A2'),
+                                'bg-orange-500': isSeatOccupied('A2'),
+                                'bg-gray-700': !isSeatSelected('A2') && !isSeatOccupied('A2')
+                              }"
+                        (click)="chonGhe('A2')">
+                   
+                            <p class="hidden lg:block text-sm lg:text-base">A2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A3'),
+                                'bg-orange-500': isSeatOccupied('A3'),
+                                'bg-gray-700': !isSeatSelected('A3') && !isSeatOccupied('A3')
+                              }"
+                        (click)="chonGhe('A3')">
+                                <p class="hidden lg:block text-sm lg:text-base">A3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A4'),
+                                'bg-orange-500': isSeatOccupied('A4'),
+                                'bg-gray-700': !isSeatSelected('A4') && !isSeatOccupied('A4')
+                              }"
+                        (click)="chonGhe('A4')">
+                                <p class="hidden lg:block text-sm lg:text-base">A4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A5'),
+                                'bg-orange-500': isSeatOccupied('A5'),
+                                'bg-gray-700': !isSeatSelected('A5') && !isSeatOccupied('A5')
+                              }"
+                        (click)="chonGhe('A5')">
+                                <p class="hidden lg:block text-sm lg:text-base">A5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A6'),
+                                'bg-orange-500': isSeatOccupied('A6'),
+                                'bg-gray-700': !isSeatSelected('A6') && !isSeatOccupied('A6')
+                              }"
+                        (click)="chonGhe('A6')">
+                                <p class="hidden lg:block text-sm lg:text-base">A6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A7'),
+                                'bg-orange-500': isSeatOccupied('A7'),
+                                'bg-gray-700': !isSeatSelected('A7') && !isSeatOccupied('A7')
+                              }"
+                        (click)="chonGhe('A7')">
+                                <p class="hidden lg:block text-sm lg:text-base">A7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A8'),
+                                'bg-orange-500': isSeatOccupied('A8'),
+                                'bg-gray-700': !isSeatSelected('A8') && !isSeatOccupied('A8')
+                              }"
+                        (click)="chonGhe('A8')">
+                                <p class="hidden lg:block text-sm lg:text-base">A8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A9'),
+                                'bg-orange-500': isSeatOccupied('A9'),
+                                'bg-gray-700': !isSeatSelected('A9') && !isSeatOccupied('A9')
+                              }"
+                        (click)="chonGhe('A9')">
+                                <p class="hidden lg:block text-sm lg:text-base">A9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A10'),
+                                'bg-orange-500': isSeatOccupied('A10'),
+                                'bg-gray-700': !isSeatSelected('A10') && !isSeatOccupied('A10')
+                              }"
+                        (click)="chonGhe('A10')">
+                                <p class="hidden lg:block text-sm lg:text-base">A10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('A11'),
+                                'bg-orange-500': isSeatOccupied('A11'),
+                                'bg-gray-700': !isSeatSelected('A11') && !isSeatOccupied('A11')
+                              }"
+                        (click)="chonGhe('A11')">
+                                <p class="hidden lg:block text-sm lg:text-base">A11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">A</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">B</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B1'),
+                                'bg-orange-500': isSeatOccupied('B1'),
+                                'bg-gray-700': !isSeatSelected('B1') && !isSeatOccupied('B1')
+                              }"
+                        (click)="chonGhe('B1')">
+                                <p class="hidden lg:block text-sm lg:text-base">B1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B2'),
+                                'bg-orange-500': isSeatOccupied('B2'),
+                                'bg-gray-700': !isSeatSelected('B2') && !isSeatOccupied('B2')
+                              }"
+                        (click)="chonGhe('B2')">
+                                <p class="hidden lg:block text-sm lg:text-base">B2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('B3'),
+                                'bg-orange-500': isSeatOccupied('B3'),
+                                'bg-gray-700':!isSeatSelected('B3') && !isSeatOccupied('B3')
+                              }"
+                        (click)="chonGhe('B3')">
+                                <p class="hidden lg:block text-sm lg:text-base">B3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B4'),
+                                'bg-orange-500': isSeatOccupied('B4'),
+                                'bg-gray-700': !isSeatSelected('B4') && !isSeatOccupied('B4')
+                              }" 
+                        (click)="chonGhe('B4')">
+                                <p class="hidden lg:block text-sm lg:text-base">B4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B5'),
+                                'bg-orange-500': isSeatOccupied('B5'),
+                                'bg-gray-700': !isSeatSelected('B5') && !isSeatOccupied('B5')
+                              }"
+                        (click)="chonGhe('B5')">
+                                <p class="hidden lg:block text-sm lg:text-base">B5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B6'),
+                                'bg-orange-500': isSeatOccupied('B6'),
+                                'bg-gray-700': !isSeatSelected('B6') && !isSeatOccupied('B6')
+                              }"
+                        (click)="chonGhe('B6')">
+                                <p class="hidden lg:block text-sm lg:text-base">B6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B7'),
+                                'bg-orange-500': isSeatOccupied('B7'),
+                                'bg-gray-700': !isSeatSelected('B7') && !isSeatOccupied('B7')
+                              }"
+                        (click)="chonGhe('B7')">
+                                <p class="hidden lg:block text-sm lg:text-base">B7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B8'),
+                                'bg-orange-500': isSeatOccupied('B8'),
+                                'bg-gray-700': !isSeatSelected('B8') && !isSeatOccupied('B8')
+                              }"
+                        (click)="chonGhe('B8')">
+                                <p class="hidden lg:block text-sm lg:text-base">B8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B9'),
+                                'bg-orange-500': isSeatOccupied('B9'),
+                                'bg-gray-700': !isSeatSelected('B9') && !isSeatOccupied('B9')
+                              }"
+                        (click)="chonGhe('B9')">
+                                <p class="hidden lg:block text-sm lg:text-base">B9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B10'),
+                                'bg-orange-500': isSeatOccupied('B10'),
+                                'bg-gray-700': !isSeatSelected('B10') && !isSeatOccupied('B10')
+                              }"
+                        (click)="chonGhe('B10')">
+                                <p class="hidden lg:block text-sm lg:text-base">B10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('B11'),
+                                'bg-orange-500': isSeatOccupied('B11'),
+                                'bg-gray-700': !isSeatSelected('B11') && !isSeatOccupied('B11')
+                              }"
+                        (click)="chonGhe('B11')">
+                                <p class="hidden lg:block text-sm lg:text-base">B11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">B</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">C</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C1'),
+                                'bg-orange-500': isSeatOccupied('C1'),
+                                'bg-gray-700': !isSeatSelected('C1') && !isSeatOccupied('C1')
+                              }"
+                        (click)="chonGhe('C1')">
+                                <p class="hidden lg:block text-sm lg:text-base">C1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C2'),
+                                'bg-orange-500': isSeatOccupied('C2'),
+                                'bg-gray-700':!isSeatSelected('C2') && !isSeatOccupied('C2')
+                              }"
+                        (click)="chonGhe('C2')">
+                                <p class="hidden lg:block text-sm lg:text-base">C2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('C3'),
+                                'bg-orange-500': isSeatOccupied('C3'),
+                                'bg-gray-700': !isSeatSelected('C3') && !isSeatOccupied('C3')
+                              }" 
+                        (click)="chonGhe('C3')">
+                                <p class="hidden lg:block text-sm lg:text-base">C3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C4'),
+                                'bg-orange-500': isSeatOccupied('C4'),
+                                'bg-gray-700': !isSeatSelected('C4') && !isSeatOccupied('C4')
+                              }"
+                        (click)="chonGhe('C4')">
+                                <p class="hidden lg:block text-sm lg:text-base">C4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C5'),
+                                'bg-orange-500': isSeatOccupied('C5'),
+                                'bg-gray-700': !isSeatSelected('C5') && !isSeatOccupied('C5')
+                              }"
+                        (click)="chonGhe('C5')">
+                                <p class="hidden lg:block text-sm lg:text-base">C5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C6'),
+                                'bg-orange-500': isSeatOccupied('C6'),
+                                'bg-gray-700':!isSeatSelected('C6') && !isSeatOccupied('C6')
+                              }"
+                        (click)="chonGhe('C6')">
+                                <p class="hidden lg:block text-sm lg:text-base">C6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C7'),
+                                'bg-orange-500': isSeatOccupied('C7'),
+                                'bg-gray-700': !isSeatSelected('C7') && !isSeatOccupied('C7')
+                              }"
+                        (click)="chonGhe('C7')">
+                                <p class="hidden lg:block text-sm lg:text-base">C7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C8'),
+                                'bg-orange-500': isSeatOccupied('C8'),
+                                'bg-gray-700':!isSeatSelected('C8') && !isSeatOccupied('C8')
+                              }"
+                        (click)="chonGhe('C8')">
+                                <p class="hidden lg:block text-sm lg:text-base">C8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C9'),
+                                'bg-orange-500': isSeatOccupied('C9'),
+                                'bg-gray-700': !isSeatSelected('C9') && !isSeatOccupied('C9')
+                              }"
+                        (click)="chonGhe('C9')">
+                                <p class="hidden lg:block text-sm lg:text-base">C9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C10'),
+                                'bg-orange-500': isSeatOccupied('C10'),
+                                'bg-gray-700': !isSeatSelected('C10') && !isSeatOccupied('C10')
+                              }"
+                        (click)="chonGhe('C10')">
+                                <p class="hidden lg:block text-sm lg:text-base">C10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-gray-700 md:bg-[#252A31] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('C11'),
+                                'bg-orange-500': isSeatOccupied('C11'),
+                                'bg-gray-700': !isSeatSelected('C11') && !isSeatOccupied('C11')
+                              }"
+                        (click)="chonGhe('C11')">
+                                <p class="hidden lg:block text-sm lg:text-base">C11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">C</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">D</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D1'),
+                                'bg-orange-500': isSeatOccupied('D1'),
+                                'bg-gray-700': !isSeatSelected('D1') && !isSeatOccupied('D1')
+                              }"
+                        (click)="chonGhe('D1')">
+                                <p class="hidden lg:block text-sm lg:text-base">D1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D2'),
+                                'bg-orange-500': isSeatOccupied('D2'),
+                                'bg-gray-700': !isSeatSelected('D2') && !isSeatOccupied('D2')
+                              }"
+                        (click)="chonGhe('D2')">
+                                <p class="hidden lg:block text-sm lg:text-base">D2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D3'),
+                                'bg-orange-500': isSeatOccupied('D3'),
+                                'bg-gray-700': !isSeatSelected('D3') && !isSeatOccupied('D3')
+                              }"
+                        (click)="chonGhe('D3')">
+                                <p class="hidden lg:block text-sm lg:text-base">D3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D4'),
+                                'bg-orange-500': isSeatOccupied('D4'),
+                                'bg-gray-700': !isSeatSelected('D4') && !isSeatOccupied('D4')
+                              }"
+                        (click)="chonGhe('D4')">
+                                <p class="hidden lg:block text-sm lg:text-base">D4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D5'),
+                                'bg-orange-500': isSeatOccupied('D5'),
+                                'bg-gray-700': !isSeatSelected('D5') && !isSeatOccupied('D5')
+                              }"
+                        (click)="chonGhe('D5')">
+                                <p class="hidden lg:block text-sm lg:text-base">D5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D6'),
+                                'bg-orange-500': isSeatOccupied('D6'),
+                                'bg-gray-700': !isSeatSelected('D6') && !isSeatOccupied('D6')
+                              }"
+                        (click)="chonGhe('D6')">
+                                <p class="hidden lg:block text-sm lg:text-base">D6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D7'),
+                                'bg-orange-500': isSeatOccupied('D7'),
+                                'bg-gray-700': !isSeatSelected('D7') && !isSeatOccupied('D7')
+                              }"
+                        (click)="chonGhe('D7')">
+                                <p class="hidden lg:block text-sm lg:text-base">D7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D8'),
+                                'bg-orange-500': isSeatOccupied('D8'),
+                                'bg-gray-700': !isSeatSelected('D8') && !isSeatOccupied('D8')
+                              }"
+                        (click)="chonGhe('D8')">
+                                <p class="hidden lg:block text-sm lg:text-base">D8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D9'),
+                                'bg-orange-500': isSeatOccupied('D9'),
+                                'bg-gray-700': !isSeatSelected('D9') && !isSeatOccupied('D9')
+                              }"
+                        (click)="chonGhe('D9')">
+                                <p class="hidden lg:block text-sm lg:text-base">D9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D10'),
+                                'bg-orange-500': isSeatOccupied('D10'),
+                                'bg-gray-700': !isSeatSelected('D10') && !isSeatOccupied('D10')
+                              }"
+                        (click)="chonGhe('D10')">
+                                <p class="hidden lg:block text-sm lg:text-base">D10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('D11'),
+                                'bg-orange-500': isSeatOccupied('D11'),
+                                'bg-gray-700': !isSeatSelected('D11') && !isSeatOccupied('D11')
+                              }"
+                        (click)="chonGhe('D11')">
+                                <p class="hidden lg:block text-sm lg:text-base">D11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">D</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">E</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E1'),
+                                'bg-orange-500': isSeatOccupied('E1'),
+                                'bg-gray-700': !isSeatSelected('E1') && !isSeatOccupied('E1')
+                              }"
+                        (click)="chonGhe('E1')">
+                                <p class="hidden lg:block text-sm lg:text-base">E1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E2'),
+                                'bg-orange-500': isSeatOccupied('E2'),
+                                'bg-gray-700': !isSeatSelected('E2') && !isSeatOccupied('E2')
+                              }"
+                        (click)="chonGhe('E2')">
+                                <p class="hidden lg:block text-sm lg:text-base">E2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E3'),
+                                'bg-orange-500': isSeatOccupied('E3'),
+                                'bg-gray-700': !isSeatSelected('E3') && !isSeatOccupied('E3')
+                              }"
+                        (click)="chonGhe('E3')">
+                                <p class="hidden lg:block text-sm lg:text-base">E3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E4'),
+                                'bg-orange-500': isSeatOccupied('E4'),
+                                'bg-gray-700': !isSeatSelected('E4') && !isSeatOccupied('E4')
+                              }"
+                        (click)="chonGhe('E4')">
+                                <p class="hidden lg:block text-sm lg:text-base">E4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E5'),
+                                'bg-orange-500': isSeatOccupied('E5'),
+                                'bg-gray-700': !isSeatSelected('E5') && !isSeatOccupied('E5')
+                              }"
+                        (click)="chonGhe('E5')">
+                                <p class="hidden lg:block text-sm lg:text-base">E5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E6'),
+                                'bg-orange-500': isSeatOccupied('E6'),
+                                'bg-gray-700': !isSeatSelected('E6') && !isSeatOccupied('E6')
+                              }"
+                        (click)="chonGhe('E6')">
+                                <p class="hidden lg:block text-sm lg:text-base">E6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E7'),
+                                'bg-orange-500': isSeatOccupied('E7'),
+                                'bg-gray-700': !isSeatSelected('E7') && !isSeatOccupied('E7')
+                              }"
+                        (click)="chonGhe('E7')">
+                                <p class="hidden lg:block text-sm lg:text-base">E7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E8'),
+                                'bg-orange-500': isSeatOccupied('E8'),
+                                'bg-gray-700': !isSeatSelected('E8') && !isSeatOccupied('E8')
+                              }"
+                        (click)="chonGhe('E8')">
+                                <p class="hidden lg:block text-sm lg:text-base">E8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E9'),
+                                'bg-orange-500': isSeatOccupied('E9'),
+                                'bg-gray-700':!isSeatSelected('E9') && !isSeatOccupied('E9')
+                              }"
+                        (click)="chonGhe('E9')">
+                                <p class="hidden lg:block text-sm lg:text-base">E9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E10'),
+                                'bg-orange-500': isSeatOccupied('E10'),
+                                'bg-gray-700': !isSeatSelected('E10') && !isSeatOccupied('E10')
+                              }"
+                        (click)="chonGhe('E10')">
+                                <p class="hidden lg:block text-sm lg:text-base">E10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('E11'),
+                                'bg-orange-500': isSeatOccupied('E11'),
+                                'bg-gray-700':  !isSeatSelected('E11') && !isSeatOccupied('E11')
+                              }"
+                        (click)="chonGhe('E11')">
+                                <p class="hidden lg:block text-sm lg:text-base">E11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">E</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">F</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F1'),
+                                'bg-orange-500': isSeatOccupied('F1'),
+                                'bg-gray-700':  !isSeatSelected('F1') && !isSeatOccupied('F1')
+                              }"
+                        (click)="chonGhe('F1')">
+                                <p class="hidden lg:block text-sm lg:text-base">F1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('F2'),
+                                'bg-orange-500': isSeatOccupied('F2'),
+                                'bg-gray-700':  !isSeatSelected('F2') && !isSeatOccupied('F2')
+                              }"
+                        (click)="chonGhe('F2')">
+                                <p class="hidden lg:block text-sm lg:text-base">F2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F3'),
+                                'bg-orange-500': isSeatOccupied('F3'),
+                                'bg-gray-700':  !isSeatSelected('F3') && !isSeatOccupied('F3')
+                              }"
+                        (click)="chonGhe('F3')">
+                                <p class="hidden lg:block text-sm lg:text-base">F3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F4'),
+                                'bg-orange-500': isSeatOccupied('F4'),
+                                'bg-gray-700':  !isSeatSelected('F4') && !isSeatOccupied('F4')
+                              }" 
+                        (click)="chonGhe('F4')">
+                                <p class="hidden lg:block text-sm lg:text-base">F4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('F5'),
+                                'bg-orange-500': isSeatOccupied('F5'),
+                                'bg-gray-700':  !isSeatSelected('F5') && !isSeatOccupied('F5')
+                              }"
+                        (click)="chonGhe('F5')">
+                                <p class="hidden lg:block text-sm lg:text-base">F5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F6'),
+                                'bg-orange-500': isSeatOccupied('F6'),
+                                'bg-gray-700':  !isSeatSelected('F6') && !isSeatOccupied('F6')
+                              }"
+                        (click)="chonGhe('F6')">
+                                <p class="hidden lg:block text-sm lg:text-base">F6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F7'),
+                                'bg-orange-500': isSeatOccupied('F7'),
+                                'bg-gray-700':  !isSeatSelected('F7') && !isSeatOccupied('F7')
+                              }"
+                        (click)="chonGhe('F7')">
+                                <p class="hidden lg:block text-sm lg:text-base">F7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F8'),
+                                'bg-orange-500': isSeatOccupied('F8'),
+                                'bg-gray-700':  !isSeatSelected('F8') && !isSeatOccupied('F8')
+                              }"
+                        (click)="chonGhe('F8')">
+                                <p class="hidden lg:block text-sm lg:text-base">F8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F9'),
+                                'bg-orange-500': isSeatOccupied('F9'),
+                                'bg-gray-700': !isSeatSelected('F9') && !isSeatOccupied('F9')
+                              }"
+                        (click)="chonGhe('F9')">
+                                <p class="hidden lg:block text-sm lg:text-base">F9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F10'),
+                                'bg-orange-500': isSeatOccupied('F10'),
+                                'bg-gray-700':  !isSeatSelected('F10') && !isSeatOccupied('F10')
+                              }"
+                        (click)="chonGhe('F10')">
+                                <p class="hidden lg:block text-sm lg:text-base">F10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('F11'),
+                                'bg-orange-500': isSeatOccupied('F11'),
+                                'bg-gray-700': !isSeatSelected('F11') && !isSeatOccupied('F11')
+                              }"
+                        (click)="chonGhe('F11')">
+                                <p class="hidden lg:block text-sm lg:text-base">F11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">F</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">G</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G1'),
+                                'bg-orange-500': isSeatOccupied('G1'),
+                                'bg-gray-700': !isSeatSelected('G1') && !isSeatOccupied('G1')
+                              }"
+                        (click)="chonGhe('G1')">
+                                <p class="hidden lg:block text-sm lg:text-base">G1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G2'),
+                                'bg-orange-500': isSeatOccupied('G2'),
+                                'bg-gray-700': !isSeatSelected('G2') && !isSeatOccupied('G2')
+                              }"
+                        (click)="chonGhe('G2')">
+                                <p class="hidden lg:block text-sm lg:text-base">G2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G3'),
+                                'bg-orange-500': isSeatOccupied('G3'),
+                                'bg-gray-700': !isSeatSelected('G3') &&!isSeatOccupied('G3')
+                              }"
+                        (click)="chonGhe('G3')">
+                                <p class="hidden lg:block text-sm lg:text-base">G3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G4'),
+                                'bg-orange-500': isSeatOccupied('G4'),
+                                'bg-gray-700': !isSeatSelected('G4') && !isSeatOccupied('G4')
+                              }"
+                        (click)="chonGhe('G4')">
+                                <p class="hidden lg:block text-sm lg:text-base">G4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G5'),
+                                'bg-orange-500': isSeatOccupied('G5'),
+                                'bg-gray-700': !isSeatSelected('G5') && !isSeatOccupied('G5')
+                              }"
+                        (click)="chonGhe('G5')">
+                                <p class="hidden lg:block text-sm lg:text-base">G5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G6'),
+                                'bg-orange-500': isSeatOccupied('G6'),
+                                'bg-gray-700': !isSeatSelected('G6') && !isSeatOccupied('G6')
+                              }"
+                        (click)="chonGhe('G6')">
+                                <p class="hidden lg:block text-sm lg:text-base">G6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G7'),
+                                'bg-orange-500': isSeatOccupied('G7'),
+                                'bg-gray-700': !isSeatSelected('G7') && !isSeatOccupied('G7')
+                              }"
+                        (click)="chonGhe('G7')">
+                                <p class="hidden lg:block text-sm lg:text-base">G7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G8'),
+                                'bg-orange-500': isSeatOccupied('G8'),
+                                'bg-gray-700': !isSeatSelected('G8') && !isSeatOccupied('G8')
+                              }"
+                        (click)="chonGhe('G8')">
+                                <p class="hidden lg:block text-sm lg:text-base">G8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G9'),
+                                'bg-orange-500': isSeatOccupied('G9'),
+                                'bg-gray-700': !isSeatSelected('G9') && !isSeatOccupied('G9')
+                              }"
+                        (click)="chonGhe('G9')">
+                                <p class="hidden lg:block text-sm lg:text-base">G9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('G10'),
+                                'bg-orange-500': isSeatOccupied('G10'),
+                                'bg-gray-700': !isSeatSelected('G10') && !isSeatOccupied('G10')
+                              }"
+                        (click)="chonGhe('G10')">
+                                <p class="hidden lg:block text-sm lg:text-base">G10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('G11'),
+                                'bg-orange-500': isSeatOccupied('G11'),
+                                'bg-gray-700': !isSeatSelected('G11') && !isSeatOccupied('G11')
+                              }"
+                        (click)="chonGhe('G11')">
+                                <p class="hidden lg:block text-sm lg:text-base">G11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">G</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">H</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H1'),
+                                'bg-orange-500': isSeatOccupied('H1'),
+                                'bg-gray-700': !isSeatSelected('H1') && !isSeatOccupied('H1')
+                              }"
+                        (click)="chonGhe('H1')">
+                                <p class="hidden lg:block text-sm lg:text-base">H1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H2'),
+                                'bg-orange-500': isSeatOccupied('H2'),
+                                'bg-gray-700': !isSeatSelected('H2') && !isSeatOccupied('H2')
+                              }"
+                        (click)="chonGhe('H2')">
+                                <p class="hidden lg:block text-sm lg:text-base">H2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H3'),
+                                'bg-orange-500': isSeatOccupied('H3'),
+                                'bg-gray-700': !isSeatSelected('H3') && !isSeatOccupied('H3')
+                              }"
+                        (click)="chonGhe('H3')">
+                                <p class="hidden lg:block text-sm lg:text-base">H3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H4'),
+                                'bg-orange-500': isSeatOccupied('H4'),
+                                'bg-gray-700': !isSeatSelected('H4') && !isSeatOccupied('H4')
+                              }"
+                        (click)="chonGhe('H4')">
+                                <p class="hidden lg:block text-sm lg:text-base">H4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H5'),
+                                'bg-orange-500': isSeatOccupied('H5'),
+                                'bg-gray-700': !isSeatSelected('H5') && !isSeatOccupied('H5')
+                              }"
+                        (click)="chonGhe('H5')">
+                                <p class="hidden lg:block text-sm lg:text-base">H5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H6'),
+                                'bg-orange-500': isSeatOccupied('H6'),
+                                'bg-gray-700': !isSeatSelected('H6') && !isSeatOccupied('H6')
+                              }"
+                        (click)="chonGhe('H6')">
+                                <p class="hidden lg:block text-sm lg:text-base">H6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H7'),
+                                'bg-orange-500': isSeatOccupied('H7'),
+                                'bg-gray-700': !isSeatSelected('H7') && !isSeatOccupied('H7')
+                              }"
+                        (click)="chonGhe('H7')">
+                                <p class="hidden lg:block text-sm lg:text-base">H7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H8'),
+                                'bg-orange-500': isSeatOccupied('H8'),
+                                'bg-gray-700': !isSeatSelected('H8') && !isSeatOccupied('H8')
+                              }"
+                        (click)="chonGhe('H8')">
+                                <p class="hidden lg:block text-sm lg:text-base">H8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H9'),
+                                'bg-orange-500': isSeatOccupied('H9'),
+                                'bg-gray-700': !isSeatSelected('H9') && !isSeatOccupied('H9')
+                              }"
+                        (click)="chonGhe('H9')">
+                                <p class="hidden lg:block text-sm lg:text-base">H9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('H10'),
+                                'bg-orange-500': isSeatOccupied('H10'),
+                                'bg-gray-700': !isSeatSelected('H10') && !isSeatOccupied('H10')
+                              }"
+                        (click)="chonGhe('H10')">
+                                <p class="hidden lg:block text-sm lg:text-base">H10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF8413] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500':isSeatSelected('H11'),
+                                'bg-orange-500': isSeatOccupied('H11'),
+                                'bg-gray-700': !isSeatSelected('H11') && !isSeatOccupied('H11')
+                              }"
+                        (click)="chonGhe('H11')">
+                                <p class="hidden lg:block text-sm lg:text-base">H11</p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">H</div>
+                        </div>
+                        <div class="grid md:flex gap-1 items-center justify-center seat">
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">I</div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I1'),
+                                'bg-orange-500': isSeatOccupied('I1'),
+                                'bg-gray-700':!isSeatSelected('I1') && !isSeatOccupied('I1')
+                              }"
+                        (click)="chonGhe('I1')">
+                                <p class="hidden lg:block text-sm lg:text-base">I1</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I2'),
+                                'bg-orange-500': isSeatOccupied('I2'),
+                                'bg-gray-700': !isSeatSelected('I2') && !isSeatOccupied('I2')
+                              }"
+                        (click)="chonGhe('I2')">
+                                <p class="hidden lg:block text-sm lg:text-base">I2</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I3'),
+                                'bg-orange-500': isSeatOccupied('I3'),
+                                'bg-gray-700': !isSeatSelected('I3') && !isSeatOccupied('I3')
+                              }"
+                        (click)="chonGhe('I3')">
+                                <p class="hidden lg:block text-sm lg:text-base">I3</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I4'),
+                                'bg-orange-500': isSeatOccupied('I4'),
+                                'bg-gray-700': !isSeatSelected('I4') && !isSeatOccupied('I4')
+                              }"
+                        (click)="chonGhe('I4')">
+                                <p class="hidden lg:block text-sm lg:text-base">I4</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I5'),
+                                'bg-orange-500': isSeatOccupied('I5'),
+                                'bg-gray-700': !isSeatSelected('I5') && !isSeatOccupied('I5')
+                              }"
+                        (click)="chonGhe('I5')">
+                                <p class="hidden lg:block text-sm lg:text-base">I5</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I6'),
+                                'bg-orange-500': isSeatOccupied('I6'),
+                                'bg-gray-700': !isSeatSelected('I6') && !isSeatOccupied('I6')
+                              }"
+                        (click)="chonGhe('I6')">
+                                <p class="hidden lg:block text-sm lg:text-base">I6</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I7'),
+                                'bg-orange-500': isSeatOccupied('I7'),
+                                'bg-gray-700': !isSeatSelected('I7') && !isSeatOccupied('I7')
+                              }"
+                        (click)="chonGhe('I7')">
+                                <p class="hidden lg:block text-sm lg:text-base">I7</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I8'),
+                                'bg-orange-500': isSeatOccupied('I8'),
+                                'bg-gray-700': !isSeatSelected('I8') && !isSeatOccupied('I8')
+                              }"
+                        (click)="chonGhe('I8')">
+                                <p class="hidden lg:block text-sm lg:text-base">I8</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I9'),
+                                'bg-orange-500': isSeatOccupied('I9'),
+                                'bg-gray-700': !isSeatSelected('I9') && !isSeatOccupied('I9')
+                              }"
+                        (click)="chonGhe('I9')">
+                                <p class="hidden lg:block text-sm lg:text-base">I9</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-[#FF3741] cursor-pointer"
+                            [ngClass]="{
+                                'bg-red-500': isSeatSelected('I10'),
+                                'bg-orange-500': isSeatOccupied('I10'),
+                                'bg-gray-700': !isSeatSelected('I10') && !isSeatOccupied('I10')
+                              }"
+                        (click)="chonGhe('I10')">
+                                <p class="hidden lg:block text-sm lg:text-base">I10</p>
+                            </div>
+                            <div class="aspect-square rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center md:h-6 lg:h-10 bg-transparent">
+                                <p class="hidden lg:block text-sm lg:text-base"></p>
+                            </div>
+                            <div class="aspect-square w-3 sm:w-6 xl:h-10 xl:w-10 rounded-[2px] sm:rounded-sm xl:rounded-[8px] flex items-center justify-center text-[8px] sm:text-sm lg:hidden">I</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 xl:gap-8 mt-8 flex-wrap text-sm md:text-base">
+                    <div class="flex gap-2 items-center">
+                        <div class="aspect-square xl:h-8 xl:w-8 w-4 sm:w-6 bg-gray-700 md:bg-[#3A3F46] flex items-center justify-center rounded-[4px] xl:rounded-[8px]" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 md:text-gray-500 h-2 w-2 md:h-6 md:w-6">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg>
+                        </div ></div>
+                        <div class="flex gap-2 items-center">
+                            <div class="aspect-square xl:h-8 xl:w-8 w-4 sm:w-6 bg-red-500 flex items-center justify-center rounded-[4px] xl:rounded-[8px]">
+    
+                            </div>Ghế đang chọn</div>
+                            <div class="flex gap-2 items-center">
+                                <div class="aspect-square xl:h-8 xl:w-8 w-4 sm:w-6 bg-gray-700 md:bg-[#252A31] flex items-center justify-center rounded-[4px] xl:rounded-[8px]">
+    
+                                </div>còn trống</div>
+                                <div class="flex gap-2 items-center" >
+                                    <div class="aspect-square xl:h-8 xl:w-8 w-4 sm:w-6 bg-[#FF8413] flex items-center justify-center rounded-[4px] xl:rounded-[8px]">
+    
+                                    </div>Đã có người chọn</div>
+                                    <div class="flex gap-2 items-center" style="display: none;">
+                                        <div class="aspect-square xl:h-8 xl:w-8 w-4 sm:w-6 bg-[#FF3741] flex items-center justify-center rounded-[4px] xl:rounded-[8px]">
+    
+                                        </div>Ghế đôi</div>
+                                    </div>
+                                    <div class="flex items-center justify-between w-full mt-8 flex-wrap gap-y-4">
+                                        <div>
+                                            <p>Ghế đã chọn: <span class="font-semibold">{{selectedSeat.join(', ')}}</span></p>
+                                            <p>Tổng tiền: <span class="font-semibold">{{ seat_sum_cost | number: '1.0-0' }} đ</span></p>
+                                        </div>
+                                        <div class="flex items-center justify-center gap-2 w-full xl:w-auto">
+                                            <button class="inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-danger text-destructive-foreground hover:bg-blue-500 h-10 px-8 py-2 hover:scale-105 transition duration-300" 
+                                            (click)="bookTicket()">Đặt vé</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </body>

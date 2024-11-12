@@ -3,23 +3,29 @@
         <h1 class="text-[23px] font-bold">
             <span class="bg-red inline-block p-2 rounded-full"></span> Phim đang chiếu
         </h1>
-        <div class="mt-[10px] flex justify-between w-[270px]">
+        <!-- <div class="mt-[10px] flex justify-between w-[270px]">
             <button class="border rounded-md w-[80px] h-[35px]
             hover:bg-sub-title ">2-9-2024</button>
             <button class="border  rounded-md w-[80px] h-[35px]
             hover:bg-sub-title ">2-9-2024</button>
             <button class="border rounded-md w-[80px] h-[35px]
             hover:bg-sub-title">2-9-2024</button>
-        </div>
+        </div> -->
         <p class="text-warn mt-[10px]">Lưu ý: Khán giả dưới 13 tuổi chỉ chọn suất chiếu kết thúc trước 22h và Khán giả dưới 16 tuổi chỉ chọn suất chiếu kết
         thúc trước 23h.</p>
     </div>
     <div class="grid grid-cols-2 gap-3 basic-width mx-auto pb-[80px]">
-        <app-movie-showtimes-card></app-movie-showtimes-card>
-        <app-movie-showtimes-card></app-movie-showtimes-card>
-        <app-movie-showtimes-card></app-movie-showtimes-card>
-        <app-movie-showtimes-card></app-movie-showtimes-card>
-        <app-movie-showtimes-card></app-movie-showtimes-card>
-        <app-movie-showtimes-card></app-movie-showtimes-card>
+        <div *ngFor="let schedule of nowShowing" >
+            <app-movie-showtimes-card
+                [title]="schedule.phim.ten_phim"
+                [date]="schedule.phim.ngay_phat_hanh"
+                [genre]="schedule.phim.the_loai"
+                [image]="schedule.phim.image"
+                [thoi_luong]="schedule.phim.thoi_luong"
+                [time]="schedule.thoi_gian"
+                [id]="schedule.id"
+            ></app-movie-showtimes-card>
+        </div>
+        
     </div>
 </div>
