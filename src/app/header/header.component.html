@@ -27,11 +27,11 @@
         (click)="changeActive('about')"
         routerLink="/about">Giới thiệu</li>
 
-        <li class="hover:text-header-text-hover cursor-pointer"
+        <!-- <li class="hover:text-header-text-hover cursor-pointer"
         [class.text-header-text-hover]="active == 'banve'"
         (click)="changeActive('banve')"
-        routerLink="/payment">Bán Vé</li>
-
+        routerLink="/payment">Bán Vé</li> -->
+        
         <li *ngIf="userId === null; else showLoggedIn">
             <!-- Content to display when user is NOT logged in -->
                 <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
@@ -51,7 +51,7 @@
                 <div class="w-[50px] h-[50px] rounded-full bg-sub-title"></div>
                 <div class="pl-[10px]">{{userName}}</div>
                 <ul class="hidden group-hover:block absolute top-[100%] left-0 w-[200px] rounded-md overflow-hidden">
-                    <li class="px-2 hover:bg-sub-title py-2" routerLink="/profile">Thông tin cá nhân</li>
+                    <!-- <li class="px-2 hover:bg-sub-title py-2" routerLink="/profile">Thông tin cá nhân</li> -->
                     <li class="px-2 hover:bg-sub-title py-2" (click)="clearUserId()">Đăng xuất</li>
                 </ul>
             </div>

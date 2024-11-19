@@ -56,6 +56,10 @@ export class BanveComponent implements OnChanges, OnInit{
 
 
   chonGhe(seat: string): void {
+    if(this.ticketData.includes(seat)){
+      return
+    }
+
     if (this.selectedSeat.includes(seat)){
       const index = this.selectedSeat.indexOf(seat)
       this.selectedSeat.splice(index,1)

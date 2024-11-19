@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import axios from 'axios';
+import { response } from 'express';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,14 +17,22 @@ export class SignUpComponent {
   registerForm: FormGroup;
   successMessage: string = '';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private route:Router) {
     this.registerForm = this.fb.group({
-      ho_ten: [''],
-      email: [''],
-      so_dien_thoai: [''],
-      mat_khau: [''],
+      ho_ten: ['', [Validators.required, this.nameValidator]],
+      email: ['', [Validators.required, Validators.email]],
+      so_dien_thoai: ['', [Validators.required, Validators.pattern('^\\d{10,15}$')]],
     });
   }
+
+  // Custom validator để kiểm tra họ tên
+nameValidator(control: AbstractControl): ValidationErrors | null {
+  const value = control.value;
+  if (!value || /^[^0-9]*$/.test(value)) {
+    return null; // hợp lệ nếu không chứa số
+  }
+  return { invalidName: 'Họ tên không hợp lệ' };
+}
 
   onSubmit() {
     if (this.registerForm.valid) {  // Kiểm tra nếu form hợp lệ
@@ -34,12 +44,13 @@ export class SignUpComponent {
   
       axios.post('http://127.0.0.1:8000/api/tai_khoan_khach_hang/signup', data)
         .then(response => {
-          this.successMessage = 'Đăng ký thành công!';
+          this.successMessage = response.data.message;
           this.registerForm.reset();
+          this.route.navigate(['/login'])
         })
         .catch(error => {
           console.error('Đăng ký thất bại', error);
-          this.successMessage = 'Đăng ký thất bại. Vui lòng thử lại.';
+          this.successMessage = error.response.data.message;
         });
     } else {
       this.successMessage = 'Vui lòng điền đầy đủ thông tin!';

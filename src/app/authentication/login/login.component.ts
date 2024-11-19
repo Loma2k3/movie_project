@@ -1,19 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import axios from 'axios';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule,FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit{
   loginForm: FormGroup;
   message = "";
+  email ="";
+  password="";
 
   ngOnInit(): void {
     const userId = localStorage.getItem('user_id');
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit{
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
       mat_khau: ['', [Validators.required]] // Use 'mat_khau' for password
     });
   }
@@ -37,6 +39,10 @@ export class LoginComponent implements OnInit{
   }
 
   async onSubmit() {
+    if(this.email === "" ||this.password === ""){
+      this.message="Hãy nhập đầy đủ thông tin";
+    }
+
     if (this.loginForm.valid) {
       const { email, mat_khau } = this.loginForm.value; // Extract email and password
       try {
@@ -52,7 +58,7 @@ export class LoginComponent implements OnInit{
           this.reloadPage()
         }
       } catch (error) {
-        this.message="login failed"; // Handle error
+        this.message="Email hoặc mật khẩu không đúng"; // Handle error
       }
     }
   }

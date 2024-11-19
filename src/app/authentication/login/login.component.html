@@ -4,11 +4,11 @@
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <h3>Đăng nhập</h3>
             <div class="form-group">
-              <input type="text" formControlName="email" required id="siu">
+              <input type="text" formControlName="email" [(ngModel)]="email" required id="siu">
               <label for="email" id="siu">Email</label>
             </div>
             <div class="form-group">
-              <input type="password" formControlName="mat_khau" required id="siu">
+              <input type="password" formControlName="mat_khau" [(ngModel)]="password" required id="siu">
               <label for="mat_khau" id="siu">Mật khẩu</label>
             </div>
             <input type="submit" value="Đăng nhập" id="si">

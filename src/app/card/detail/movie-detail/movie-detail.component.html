@@ -3,20 +3,18 @@
 <div class="bg-main py-[50px] select-none">
     <div class="flex  text-title 
      w-[930px] mx-auto">
-        <div class="basis-1/3 overflow-hidden rounded-xl">
-            <img [src]="selected.phim.image" alt="" class="w-[100%] h-[100%]
+        <div class="basis-1/3 overflow-hidden ">
+            <img [src]="selected.phim.image" alt="" class="w-[100%] h-auto rounded-xl
             hover:scale-110 transition duration-500">
         </div>
     
         <div class="basis-2/3 p-[20px]flex flex-col p-[20px]">
             <h1 class="m-0 text-[23px] pt-[8px] font-bold flex items-center gap-2">{{selected.phim.ten_phim}}
-                <span class="border rounded-lg overflow-hidden
-                    right-[20px] top-[20px] p-[5px] text-[13px] font-bold">3D</span>
+                
             </h1>
             <p class=" pt-[20px] m-0 text-[15px] text-sub-title flex gap-4"><span>{{selected.phim.the_loai}}</span> <span>{{selected.phim.thoi_luong}}
                     phút</span></p>
-    
-            <p>Xuất xứ: Japan</p>
+
             <p>Đạo diễn: {{selected.phim.dao_dien}}</p>
             <p>Diễn viên: {{selected.phim.dien_vien}}</p>
             <p>Khởi chiếu: {{selected.phim.ngay_phat_hanh}}</p>
@@ -29,11 +27,7 @@
                         (click)="banve=true">
                 Đặt vé
             </button>
-            <button class="border-2 rounded-full border-header-text h-[41px] w-[143px]
-                        cursor-pointer hover:scale-105 transition mt-[20px] ml-3"
-                        >
-                Trailer
-            </button>
+           
         </div>
     </div>
 

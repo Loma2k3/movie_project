@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,13 +14,13 @@ export class HeaderComponent {
   userId: number | null = null;
   userName: string | null = null;
 
-  constructor() {
+  constructor(private router:Router) {
     this.checkUserLogin();
   }
 
   clearUserId(): void {
     localStorage.removeItem('user_id');  // Removes 'user_id' from localStorage
-    window.location.reload();
+    this.router.navigate(['/home']);
   }
 
   changeActive(status:string) {
